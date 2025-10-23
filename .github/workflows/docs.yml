@@ -1,0 +1,36 @@
+name: docs
+
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  markdownlint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+      - name: Setup Node
+        uses: actions/setup-node@8f152de45cc393bb48ce5d89e8c47421518b1f5a
+        with:
+          node-version: 20
+      - name: Install markdownlint-cli2
+        run: npm i -g markdownlint-cli2@0.14.0 markdownlint-cli2-config@0.0.3
+      - name: Lint markdown
+        run: markdownlint-cli2 "**/*.md" "!node_modules"
+
+  linkcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+      - name: Link Checker
+        uses: lycheeverse/lychee-action@7da8ec1f3db0f58d8d8d4d7ca9f2f0e3b0a6b2d9
+        with:
+          args: --config .lychee.toml --no-progress --verbose **/*.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
