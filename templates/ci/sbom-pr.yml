@@ -1,0 +1,24 @@
+name: sbom-pr (example)
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  sbom:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+      - name: Generate SBOM (CycloneDX)
+        uses: anchore/sbom-action@aa0e114b2e19480f157109b9922bda359bd98b90
+        with:
+          format: cyclonedx-json
+          output-file: sbom.cdx.json
+      - name: Upload artifact
+        uses: actions/upload-artifact@834a144ee995460fba8ed112a2fc961b36a5ec5a
+        with:
+          name: sbom
+          path: sbom.cdx.json
