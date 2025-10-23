@@ -1,0 +1,28 @@
+name: Spike
+description: Timeboxed exploration to answer unknowns
+labels: ["chore"]
+body:
+  - type: input
+    id: timebox
+    attributes:
+      label: Timebox (e.g., 0.5 day)
+    validations:
+      required: true
+  - type: textarea
+    id: questions
+    attributes:
+      label: Questions to answer
+    validations:
+      required: true
+  - type: textarea
+    id: plan
+    attributes:
+      label: Plan (what you will try)
+    validations:
+      required: false
+  - type: textarea
+    id: findings
+    attributes:
+      label: Findings (fill after)
+    validations:
+      required: false
