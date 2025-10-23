@@ -20,7 +20,7 @@ Add `AGENTS.md`, `ARCHITECTURE.md`, `DECISIONS.md` from this kit. Update project
 - Enable one **blocking** CI job; keep others **advisory** until stable.
 - Turn on branch protection for `main` (PRs‑only; require blocking checks).
 - Add CODEOWNERS for hot zones if you have them.
-- Enable weekly dependency updates (see `templates/.github/dependabot.yml`).
+- **Dependency updates:** copy `templates/.github/dependabot.yml` (or use Renovate; choose one).
 - SBOM: generate CycloneDX on release (this kit includes a stub).
 
 ## 4) Issue/PR templates
