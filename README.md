@@ -12,3 +12,5 @@ Baton is a small, reusable way to pair‑program with AI using **one control pla
 This repo is the upstream kit; projects copy or pin it and add specifics.
 
 **License:** MIT
+
+See `templates/prompts/entry-ritual.md` and `templates/AGENTS.template.md` for downstream usage.
