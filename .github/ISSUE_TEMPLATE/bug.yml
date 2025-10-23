@@ -1,0 +1,43 @@
+name: Bug
+description: Something is broken or regressed
+labels: ["type:bug"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Version / commit
+    validations:
+      required: false
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Be specific; include expected vs actual
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context (env, config)
+    validations:
+      required: false
+  - type: dropdown
+    id: lane
+    attributes:
+      label: Lane
+      options: ["A","B","C"]
+    validations:
+      required: true
+  - type: dropdown
+    id: ai_profile
+    attributes:
+      label: AI profile
+      options: ["thinking","fast","cheap"]
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: Proposed Solution (optional)
+    validations:
+      required: false
