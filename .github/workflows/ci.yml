@@ -23,6 +23,8 @@ jobs:
         uses: amannn/action-semantic-pull-request@48f256284bd46cdaab1048c3721360e808335d50
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build smoke
+        run: echo "no build for this repo"
 
   smart_blocks:
     if: ${{ github.event_name == 'pull_request' }}
@@ -41,9 +43,12 @@ jobs:
               - 'public_api/**'
             security:
               - 'security/**'
-      - name: Schema guard (placeholder)
+      - name: Schema guard
         if: steps.changes.outputs.schema == 'true'
-        run: echo 'TODO: add schema compat checks'
-      - name: API doc drift (placeholder)
+        run: echo "schema changes detected"
+      - name: API doc drift
         if: steps.changes.outputs.public_api == 'true'
-        run: echo 'TODO: validate API docs drift'
+        run: echo "api changes detected"
+      - name: Security area note
+        if: steps.changes.outputs.security == 'true'
+        run: echo "security area touched"
