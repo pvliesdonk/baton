@@ -7,6 +7,7 @@ A short playbook for common CI pitfalls when adopting Baton.
 - Set `env: GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}` on the gitleaks step.
 - Do **not** pass `with: args` to `gitleaks/gitleaks-action@v2` — the action reads env/flags internally.
 - Pin all actions by **commit SHA**, not tags.
+- SBOM generation should live **downstream** (use templates like `templates/ci/sbom-pr.yml`).
 
 ## Required checks
 - Protect the **job name** you own (e.g., `blocking`), not the workflow name.
