@@ -17,7 +17,7 @@ Create two views: **Planning** (group by status, sort by Priority) and **Deliver
 Add `AGENTS.md`, `ARCHITECTURE.md`, `DECISIONS.md` from this kit. Update project specifics.
 
 ## 3) CI & security
-- Enable one **blocking** CI job; keep others **advisory** until stable.
+- Enable one **blocking** CI job; keep others **advisory** until stable. See `docs/checks-policy.md`.
 - Turn on branch protection for `main` (PRs‑only; require blocking checks).
 - Add CODEOWNERS for hot zones if you have them.
 - **Dependency updates:** copy `templates/.github/dependabot.yml` (or use Renovate; choose one).
@@ -103,4 +103,4 @@ gh issue create --title "feat: initial scaffold" \
 # Paste the Entry Ritual from templates/prompts/entry-ritual.md into your chat with the AI.
 ```
 
-> Want an AI to do steps 1–9 for you? Use the **Repo Setup Agent** prompt: `templates/prompts/repo-setup.md` (supports MCP Local Ops with workspace `/host/workspace`).
+> Want an AI to do steps 1–9 for you? Use the Repo Setup Agent prompt: `templates/prompts/repo-setup.md`.
