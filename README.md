@@ -1,5 +1,7 @@
 # Baton — Agentic Pair‑Engineering Toolkit (v0.1)
 
+![version](https://img.shields.io/badge/baton-v0.1-blue)
+
 Baton is a reusable way to pair‑program with AI using **one control plane** (GitHub Issues/Project), three hats (Planner, Architect, Developer), **lanes** (A/B/C), and **context‑fit tickets** (small/medium/large).
 
 > This repo hosts the **toolkit** (prompts, templates, example CI). Downstream projects **adopt** it; the toolkit repo itself stays minimal.
