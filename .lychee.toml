@@ -3,6 +3,7 @@ max-concurrency = 4
 request-timeout = 20
 # Skip shields.io and badges which throttle
 exclude = [
+  '^https?://',
   'https://img.shields.io/*'
 ]
 # Treat rate-limited as warnings
