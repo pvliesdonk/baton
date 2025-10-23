@@ -11,28 +11,31 @@ This repo is the upstream kit. To use it in a project repo:
   - risk:security
   - area:{frontend,backend,infra} (trim to what you’ll use)
 
-Create two views: **Planning** (group by status, sort by Priority) and **Delivery** (hide "ready").
+Create two views: **Planning** (group by status, sort by Priority) and **Delivery** (hide "ready"). See `docs/project-views.md`.
 
 ## 2) Copy the docs
 Add `AGENTS.md`, `ARCHITECTURE.md`, `DECISIONS.md` from this kit. Update project specifics.
 
 ## 3) CI & security
-- Enable the CI workflows; replace placeholders with pinned actions.
+- Enable one **blocking** CI job; keep others **advisory** until stable.
 - Turn on branch protection for `main` (PRs‑only; require blocking checks).
 - Add CODEOWNERS for hot zones if you have them.
-- Enable weekly dependency updates; auto‑merge dev bumps on green CI.
+- Enable weekly dependency updates (see `templates/.github/dependabot.yml`).
 - SBOM: generate CycloneDX on release (this kit includes a stub).
 
 ## 4) Issue/PR templates
-- Use the **downstream issue forms** in `templates/issue-forms/` (copy into `.github/ISSUE_TEMPLATE/` in your project). They include **Lane**, **Context**, **AI profile**, and **Suggested model**.
-- Keep the PR template that echoes the Proposed Solution.
+- Use the **downstream issue forms** in `templates/issue-forms/` (copy into `.github/ISSUE_TEMPLATE/`).
+- Keep the PR template that echoes the Proposed Solution (see `templates/.github/pull_request_template.md`).
 
 ## 5) Day‑to‑day usage
-- Start sessions with the **entry ritual** in `AGENTS.md`.
+- Start sessions with the **Entry Ritual** (`templates/prompts/entry-ritual.md`).
 - Keep tickets within the **context** class; split if they swell.
-- Use **golden paths** to stay in Lane B; escalate early for Lane C.
+- Use **golden paths** to stay in Lane B; escalate for Lane C triggers.
+- When blocked, follow `docs/stuck.md`.
 
 ## 6) Upgrading
 - Pin this kit by tag; review the changelog before adopting new versions.
 
-That’s it—keep the board as the control plane and avoid a second source of truth.
+## Appendix: Choose one dependency updater
+- We provide `templates/.github/dependabot.yml`. If you prefer Renovate, use it instead. Pick **one**.
+- Always **pin GitHub Actions** by SHA when enabling CI templates.
