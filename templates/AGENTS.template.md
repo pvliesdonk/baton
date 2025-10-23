@@ -13,7 +13,7 @@ This file is intended for **downstream project repos**. It expands the binder wi
 
 **Auto Lane‑C triggers:** public API, schema/storage, security/auth, cross‑boundary coupling, new runtime dependency, breaking change, major capability.
 
-**Context classes (ticket sizing):** small / medium / large (see kit for limits).
+**Context classes (ticket sizing):** small / medium / large (see `docs/context-sizing.md`).
 
 **AI profile (per ticket):** thinking | fast | cheap.
 
