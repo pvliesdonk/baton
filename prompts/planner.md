@@ -14,6 +14,8 @@
 - Acceptance criteria (2–6 bullets).
 - Open questions + next steps.
 
+See also: [docs/glossary.md](../docs/glossary.md).
+
 **Rules**
 - Board is the control plane.
 - Ticket should fit one conversational run; split otherwise.

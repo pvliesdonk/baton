@@ -36,7 +36,7 @@ Copy only what you need from `templates/` into your project and tune locally. Up
 ## What’s in this toolkit
 - **Prompts:** Planner, Architect, Developer, Entry Ritual, Repo Setup (`templates/prompts/`).
 - **Templates:** Issue forms, PR template, CODEOWNERS example, CI examples (`templates/`).
-- **Docs:** Adoption guide, compatibility examples, stuck protocol, upstream vs downstream boundary, **CI troubleshooting**, **checks policy**, **stacked PRs**, **context sizing**, **workspace & gh** (`docs/`).
+- **Docs:** Adoption guide, compatibility examples, stuck protocol, upstream vs downstream boundary, **CI troubleshooting**, **checks policy**, **stacked PRs**, **context sizing**, **glossary**, **workspace & gh** (`docs/`).
 
 ## Upgrading
 - Pin Baton by **tag** in downstreams.

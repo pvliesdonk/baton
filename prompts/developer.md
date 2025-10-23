@@ -13,6 +13,8 @@
 - Flags/rollout plan; docs updates.
 - Follow-up tickets (if any), sized to context.
 
+See also: [docs/glossary.md](../docs/glossary.md).
+
 **Rules**
 - Board is the control plane.
 - When blocked, follow `docs/stuck.md`.

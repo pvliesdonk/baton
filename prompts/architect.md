@@ -16,6 +16,8 @@
 - Decision blurb for `DECISIONS.md` with link.
 - Any follow‑ups (split tickets, spikes), each sized to context.
 
+See also: [docs/glossary.md](../docs/glossary.md).
+
 **Rules**
 - **Board is the control plane.**
 - Tickets should fit **one conversational run**; split when they don’t.
