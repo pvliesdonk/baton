@@ -18,10 +18,10 @@ jobs:
         uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8
         with:
           node-version: 20
-      - name: Install markdownlint-cli2
-        run: npm i -g markdownlint-cli2@0.14.0 markdownlint-cli2-config@0.0.3
+      - name: Install markdownlint-cli (pinned)
+        run: npm i -g markdownlint-cli@0.42.0
       - name: Lint markdown
-        run: markdownlint-cli2 "**/*.md" "!node_modules"
+        run: markdownlint "**/*.md" "!node_modules"
 
   linkcheck:
     runs-on: ubuntu-latest
