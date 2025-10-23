@@ -2,6 +2,8 @@
 
 Upstream binder for the kit itself.
 
+See also: [docs/glossary.md](docs/glossary.md).
+
 - Control plane: GitHub Issues/Project board (single source of truth).
 - Hats: Planner, Architect, Developer.
 - Lanes: A (routine), B (notify‑then‑go), C (design‑required).

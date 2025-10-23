@@ -2,7 +2,7 @@
 
 This file is intended for **downstream project repos**. It expands the binder with project‑specific details.
 
-**Control plane:** GitHub Issues/Project board.
+**Control plane:** GitHub Issues/Project board.  \n**Glossary:** [docs/glossary.md](docs/glossary.md) _(copy this file from the toolkit if missing)._
 
 **Hats:** Planner, Architect, Developer (single profile).
 
