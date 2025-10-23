@@ -21,6 +21,8 @@ This file is intended for **downstream project repos**. It expands the binder wi
 
 **Golden paths:** feature flag / CLI command / REST endpoint.
 
+**Stuck protocol:** see `docs/stuck.md` in the toolkit.
+
 **Local policy (customize below):**
 - Code style/tooling: _fill_
 - Supported runtimes: _fill_
