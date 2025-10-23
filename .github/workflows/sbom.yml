@@ -1,0 +1,15 @@
+name: sbom
+
+on:
+  release:
+    types: [created, edited]
+  workflow_dispatch: {}
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Syft SBOM (placeholder)
+        run: echo 'TODO: install syft and attach CycloneDX JSON as release asset; pin action SHAs before enabling'
