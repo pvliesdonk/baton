@@ -1,29 +1,12 @@
-name: Feature
-description: Propose a new capability or improvement
-labels: ["type:feature"]
+name: Task
+description: Generic change or maintenance
+labels: []
 body:
-  - type: dropdown
-    id: lane
+  - type: textarea
+    id: summary
     attributes:
-      label: Lane
-      options: ["A","B","C"]
-      description: A = routine, B = notify-then-go, C = design-required
-    validations:
-      required: true
-  - type: dropdown
-    id: context
-    attributes:
-      label: Context size
-      options: ["small","medium","large"]
-      description: Keep one ticket ≈ one run; split if too big
-    validations:
-      required: true
-  - type: dropdown
-    id: ai_profile
-    attributes:
-      label: AI profile
-      options: ["thinking","fast","cheap"]
-      description: Choose the capability/price profile
+      label: Summary
+      description: What do you want to change and why?
     validations:
       required: true
   - type: textarea
@@ -32,17 +15,9 @@ body:
       label: Acceptance criteria
       description: Bulleted, observable outcomes
     validations:
-      required: true
-  - type: textarea
-    id: proposed_solution
-    attributes:
-      label: Proposed Solution (required for B/C; optional for A)
-      description: Intent, scope guardrails, test plan, rollback/flag, risks, reading set
-    validations:
       required: false
   - type: textarea
     id: notes
     attributes:
-      label: Notes / risks / unknowns
-    validations:
-      required: false
+      label: Notes
+      description: Any context or links

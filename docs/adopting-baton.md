@@ -24,7 +24,7 @@ Add `AGENTS.md`, `ARCHITECTURE.md`, `DECISIONS.md` from this kit. Update project
 - SBOM: generate CycloneDX on release (this kit includes a stub).
 
 ## 4) Issue/PR templates
-- Use the issue forms in `.github/ISSUE_TEMPLATE/` so tickets always declare **Lane**, **Context**, and **AI profile**.
+- Use the **downstream issue forms** in `templates/issue-forms/` (copy into `.github/ISSUE_TEMPLATE/` in your project). They include **Lane**, **Context**, **AI profile**, and **Suggested model**.
 - Keep the PR template that echoes the Proposed Solution.
 
 ## 5) Day‑to‑day usage
