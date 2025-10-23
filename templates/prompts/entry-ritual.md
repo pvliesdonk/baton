@@ -4,6 +4,7 @@ Copy-paste this at the start of each working session in downstream projects.
 
 **Role today:** Planner | Architect | Developer
 **Lane:** A | B | C
+_Legend: A = routine · B = notify-then-go · C = design-required_ ([glossary](../docs/glossary.md))
 **Context size:** small | medium | large
 **AI profile:** thinking | fast | cheap
 **Suggested model (optional):** _e.g., gpt5-thinking_
