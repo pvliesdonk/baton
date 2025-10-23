@@ -5,29 +5,14 @@ on:
   push:
     branches: [ main ]
 
+permissions:
+  contents: read
+
 jobs:
   blocking:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-      - name: Secrets scan (placeholder)
-        run: echo 'TODO: add gitleaks with pinned SHA'
-      - name: Lint/format (placeholder)
-        run: echo 'TODO: add fast lint/format'
-      - name: Type check (placeholder)
-        run: echo 'TODO: add fast type check on changed files'
-      - name: Tests (placeholder)
-        run: echo 'TODO: run targeted tests'
-      - name: Smoke build (placeholder)
-        run: echo 'TODO: minimal build/start check'
-      - name: Conventional commits (placeholder)
-        run: echo 'TODO: check PR title/commits'
-
-  smart_blocks:
-    if: ${{ github.event_name == 'pull_request' }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Smart blocks (schema/security/api drift)
-        run: echo 'TODO: add path‑based checks'
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+      - name: Health check
+        run: echo CI is alive
