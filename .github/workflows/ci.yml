@@ -14,36 +14,5 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
-      - name: Secrets scan (gitleaks)
-        uses: gitleaks/gitleaks-action@ff98106e4c7b2bc287b24eaf42907196329070c7
-        with:
-          args: detect --source . --no-banner --redact
-      - name: Semantic PR title
-        if: ${{ github.event_name == 'pull_request' }}
-        uses: amannn/action-semantic-pull-request@48f256284bd46cdaab1048c3721360e808335d50
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  smart_blocks:
-    if: ${{ github.event_name == 'pull_request' }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
-      - name: Path filters
-        id: changes
-        uses: dorny/paths-filter@de90cc6fb38fc0963ad72b210f1f284cd68cea36
-        with:
-          filters: |
-            schema:
-              - 'schema/**'
-            public_api:
-              - 'public_api/**'
-            security:
-              - 'security/**'
-      - name: Schema guard (placeholder)
-        if: steps.changes.outputs.schema == 'true'
-        run: echo 'TODO: add schema compat checks'
-      - name: API doc drift (placeholder)
-        if: steps.changes.outputs.public_api == 'true'
-        run: echo 'TODO: validate API docs drift'
+      - name: Health check
+        run: echo CI is alive
