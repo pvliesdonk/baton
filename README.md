@@ -1,6 +1,4 @@
-# Baton — Agentic Pair‑Engineering Toolkit (v0.1)
-
-![version](https://img.shields.io/badge/baton-v0.1-blue)
+# Baton — Agentic Pair‑Engineering Toolkit
 
 Baton is a reusable way to pair‑program with AI using **one control plane** (GitHub Issues/Project), three hats (Planner, Architect, Developer), **lanes** (A/B/C), and **context‑fit tickets** (small/medium/large).
 
@@ -34,7 +32,8 @@ Baton is a reusable way to pair‑program with AI using **one control plane** (G
 - **Docs:** Adoption guide, compatibility examples, stuck protocol, upstream vs downstream boundary, **CI troubleshooting**, **checks policy**, **stacked PRs**, **context sizing**, **workspace & gh** (`docs/`).
 
 ## Upgrading
-- Pin Baton by tag in downstreams. Review the changelog before adopting new versions.
+- Pin Baton by **tag** in downstreams.
+- Review `CHANGELOG.md` and `DECISIONS.md` before upgrading.
 
 ## Share your learnings (field reports)
 Have something battle‑tested that helped you? Please upstream the learning so others benefit.
