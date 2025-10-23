@@ -1,0 +1,30 @@
+name: pr-size-guard (example)
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  pr_size:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Compute PR size
+        id: sz
+        run: |
+          files=$(jq -r '.pull_request.changed_files' < $GITHUB_EVENT_PATH)
+          adds=$(jq -r '.pull_request.additions' < $GITHUB_EVENT_PATH)
+          dels=$(jq -r '.pull_request.deletions' < $GITHUB_EVENT_PATH)
+          loc=$((adds + dels))
+          echo "files=$files" >> $GITHUB_OUTPUT
+          echo "loc=$loc" >> $GITHUB_OUTPUT
+      - name: Warn if large
+        if: ${{ steps.sz.outputs.files > 5 || steps.sz.outputs.loc > 300 }}
+        uses: marocchino/sticky-pull-request-comment@c909654a42f1e054ea71661e6c1babbc3edb8eb1
+        with:
+          header: pr-size-guard
+          message: |
+            ⚠️ PR size is high: **${{ steps.sz.outputs.files }} files**, **${{ steps.sz.outputs.loc }} LOC**.
+            Consider splitting to keep one ticket ≈ one run (tests excluded).
