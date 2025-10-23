@@ -10,3 +10,5 @@ Baton is a small, reusable way to pair‑program with AI using **one control pla
 - Golden paths: feature flag, CLI command, REST endpoint.
 
 This repo is the upstream kit; projects copy or pin it and add specifics.
+
+**License:** MIT
