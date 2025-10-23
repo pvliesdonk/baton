@@ -18,7 +18,7 @@ Baton is a reusable way to pair‑program with AI using **one control plane** (G
 3. **Enable minimal branch protection** (main-first): require your single **blocking** check.
 4. **Kick off your first ticket** using the **Feature** form. Fill **Lane, Context, AI profile**, and (optional) **Suggested model**.
 5. **Start the session** by pasting the **Entry Ritual** into chat: see `templates/prompts/entry-ritual.md`.
-6. **(Optional) Use the Repo Setup Agent**: see `templates/prompts/repo-setup.md` if you want an AI to bootstrap the repo via CLI (with MCP Local Ops workspace `/host/workspace`).
+6. **(Optional) Use the Repo Setup Agent**: see `templates/prompts/repo-setup.md` if you want an AI to bootstrap the repo via CLI (with a workspace shell).
 
 ## Ongoing use (day-to-day)
 - Keep the **board** as the single source of truth (never duplicate status in docs).
@@ -31,7 +31,7 @@ Baton is a reusable way to pair‑program with AI using **one control plane** (G
 ## What’s in this toolkit
 - **Prompts:** Planner, Architect, Developer, Entry Ritual, Repo Setup (`templates/prompts/`).
 - **Templates:** Issue forms, PR template, CODEOWNERS example, CI examples (`templates/`).
-- **Docs:** Adoption guide, compatibility examples, stuck protocol, upstream vs downstream boundary (`docs/`).
+- **Docs:** Adoption guide, compatibility examples, stuck protocol, upstream vs downstream boundary, **CI troubleshooting**, **checks policy**, **stacked PRs**, **context sizing**, **workspace & gh** (`docs/`).
 
 ## Upgrading
 - Pin Baton by tag in downstreams. Review the changelog before adopting new versions.
