@@ -1,0 +1,12 @@
+# Example gitleaks config for downstreams
+# Copy to .gitleaks.toml in your project and tweak narrowly.
+
+# [[rules]]
+# description = "Allow generated test data containing fake secrets"
+# [rules.allowlist]
+#   paths = ["tests/data/"]
+#   regexTarget = "match"
+
+# [[allowlist.regexes]]
+# description = "Allow known false-positive token format"
+# regex = "^FAKE_[A-Z0-9]{32}$"
