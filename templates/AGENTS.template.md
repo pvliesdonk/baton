@@ -17,7 +17,7 @@ This file is intended for **downstream project repos**. It expands the binder wi
 
 **AI profile (per ticket):** thinking | fast | cheap.
 
-**Entry ritual:** see the upstream README.
+**Entry ritual:** see `templates/prompts/entry-ritual.md`.
 
 **Golden paths:** feature flag / CLI command / REST endpoint.
 
