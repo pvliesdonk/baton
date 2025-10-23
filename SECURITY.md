@@ -1,8 +1,7 @@
-# Security Policy
+# Security
 
-- Report vulnerabilities privately to the maintainer.
-- Do not include secrets in issues or PRs.
-- SBOM (CycloneDX) is generated on release.
-- Actions are pinned and least‑privileged by default.
+- Use secrets scanning (gitleaks) in CI.
+- Rotate any committed credentials immediately; do not rely on allowlists.
+- Prefer narrow allow rules with justification if needed.
 
-This is a small upstream kit; hardening grows with usage.
+See `docs/gitleaks-config.example.toml` for a commented example used by downstream projects.
