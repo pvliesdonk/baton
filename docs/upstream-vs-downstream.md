@@ -4,7 +4,8 @@
 
 ## Upstream (this repo)
 - Ships **assets**: prompts, templates under `templates/`, examples, and docs.
-- Keeps CI **minimal** (security baseline + basic health).
+- Keeps CI **minimal** (security baseline + basic health). No SBOM here.
+- No dependency update bots here; those live as **templates**.
 - May dogfood selectively, but nothing here is mandatory for this repo.
 - Guarantees: versioned changes, concise docs, examples that work.
 

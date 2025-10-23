@@ -21,7 +21,7 @@ Add `AGENTS.md`, `ARCHITECTURE.md`, `DECISIONS.md` from this kit. Update project
 - Turn on branch protection for `main` (PRs‑only; require blocking checks).
 - Add CODEOWNERS for hot zones if you have them.
 - **Dependency updates:** copy `templates/.github/dependabot.yml` (or use Renovate; choose one).
-- SBOM: generate CycloneDX on release (this kit includes a stub).
+- SBOM: generate CycloneDX on release (use `templates/ci/sbom-pr.yml` and enable a release-time SBOM in your repo).
 
 ## 4) Issue/PR templates
 - Use the **downstream issue forms** in `templates/issue-forms/` (copy into `.github/ISSUE_TEMPLATE/`).

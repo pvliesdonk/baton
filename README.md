@@ -6,6 +6,13 @@ Baton is a reusable way to pair‑program with AI using **one control plane** (G
 
 > This repo hosts the **toolkit** (prompts, templates, example CI). Downstream projects **adopt** it; the toolkit repo itself stays minimal.
 
+## What Baton is / isn’t
+- **Is:** An upstream toolkit of prompts, docs, and copy‑pasteable templates. The **board is the control plane**. Upstream CI is intentionally minimal; advisory checks are examples under `templates/ci/`.
+- **Isn’t:** A framework/CLI/policy engine. This repo does not ship app code, package manifests, SBOMs, or dependency update bots — those belong in **downstream** repos.
+
+## Adopt from `templates/`
+Copy only what you need from `templates/` into your project and tune locally. Upstream stays slim.
+
 ## Getting started (new project, new repo)
 
 1. **Create labels & project fields** (once per org): see `docs/adopting-baton.md`.
