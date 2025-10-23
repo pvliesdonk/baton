@@ -1,28 +1,23 @@
-name: Spike
-description: Timeboxed exploration to answer unknowns
-labels: ["chore"]
+name: Task
+description: Generic change or maintenance
+labels: []
 body:
-  - type: input
-    id: timebox
+  - type: textarea
+    id: summary
     attributes:
-      label: Timebox (e.g., 0.5 day)
+      label: Summary
+      description: What do you want to change and why?
     validations:
       required: true
   - type: textarea
-    id: questions
+    id: acceptance
     attributes:
-      label: Questions to answer
-    validations:
-      required: true
-  - type: textarea
-    id: plan
-    attributes:
-      label: Plan (what you will try)
+      label: Acceptance criteria
+      description: Bulleted, observable outcomes
     validations:
       required: false
   - type: textarea
-    id: findings
+    id: notes
     attributes:
-      label: Findings (fill after)
-    validations:
-      required: false
+      label: Notes
+      description: Any context or links

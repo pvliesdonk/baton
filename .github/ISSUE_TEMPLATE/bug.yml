@@ -1,43 +1,23 @@
-name: Bug
-description: Something is broken or regressed
-labels: ["type:bug"]
+name: Task
+description: Generic change or maintenance
+labels: []
 body:
-  - type: input
-    id: version
-    attributes:
-      label: Version / commit
-    validations:
-      required: false
   - type: textarea
-    id: steps
+    id: summary
     attributes:
-      label: Steps to reproduce
-      description: Be specific; include expected vs actual
+      label: Summary
+      description: What do you want to change and why?
     validations:
       required: true
   - type: textarea
-    id: context
+    id: acceptance
     attributes:
-      label: Context (env, config)
+      label: Acceptance criteria
+      description: Bulleted, observable outcomes
     validations:
       required: false
-  - type: dropdown
-    id: lane
-    attributes:
-      label: Lane
-      options: ["A","B","C"]
-    validations:
-      required: true
-  - type: dropdown
-    id: ai_profile
-    attributes:
-      label: AI profile
-      options: ["thinking","fast","cheap"]
-    validations:
-      required: true
   - type: textarea
-    id: proposed_solution
+    id: notes
     attributes:
-      label: Proposed Solution (optional)
-    validations:
-      required: false
+      label: Notes
+      description: Any context or links
