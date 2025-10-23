@@ -36,4 +36,13 @@ Baton is a reusable way to pair‑program with AI using **one control plane** (G
 ## Upgrading
 - Pin Baton by tag in downstreams. Review the changelog before adopting new versions.
 
+## Share your learnings (field reports)
+Have something battle‑tested that helped you? Please upstream the learning so others benefit.
+
+- Open an **Issue** (discussion) or a **PR** (docs/templates/prompts).
+- Include context (project size/stack, AI profile/models), links to downstream Issues/PRs and CI runs, and a short before/after.
+- Keep the toolkit minimal: prefer **templates/docs/prompts** over new enforcement.
+
+See **CONTRIBUTING.md → Field reports & upstreaming** for what to include and acceptance guidelines.
+
 **License:** MIT
