@@ -2,14 +2,25 @@ name: sbom
 
 on:
   release:
-    types: [created, edited]
+    types: [published]
   workflow_dispatch: {}
+
+permissions:
+  contents: write
 
 jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-      - name: Syft SBOM (placeholder)
-        run: echo 'TODO: install syft and attach CycloneDX JSON as release asset; pin action SHAs before enabling'
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+      - name: Generate SBOM (CycloneDX)
+        uses: anchore/sbom-action@aa0e114b2e19480f157109b9922bda359bd98b90
+        with:
+          format: cyclonedx-json
+          output-file: sbom.cdx.json
+      - name: Attach to release
+        if: ${{ github.event_name == 'release' }}
+        uses: softprops/action-gh-release@6da8fa9354ddfdc4aeace5fc48d7f679b5214090
+        with:
+          files: sbom.cdx.json
