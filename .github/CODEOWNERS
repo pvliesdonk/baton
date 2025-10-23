@@ -1,4 +1,2 @@
-/auth/ @pvliesdonk
-/security/ @pvliesdonk
-/schema/ @pvliesdonk
-/public_api/ @pvliesdonk
+# Upstream toolkit repo intentionally does not enforce ownership.
+# Downstreams should use templates/CODEOWNERS.example.

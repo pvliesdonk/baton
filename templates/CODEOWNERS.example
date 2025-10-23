@@ -1,0 +1,14 @@
+# Example CODEOWNERS (downstream)
+# Assign reviewers for hot zones; copy to .github/CODEOWNERS in your project.
+
+# Public interface changes
+/public_api/   @your-team-api
+
+# Schemas / storage
+/schema/       @your-team-db
+
+# Security-sensitive
+/security/     @your-team-security
+
+# AuthN/Z
+/auth/         @your-team-security
