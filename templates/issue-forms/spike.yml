@@ -1,5 +1,5 @@
-name: Spike
-description: Timeboxed exploration to answer unknowns
+name: Spike / Research
+description: Timeboxed exploration to answer unknowns (research questions, sources, outline)
 labels: ["chore"]
 body:
   - type: input
