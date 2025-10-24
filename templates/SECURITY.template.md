@@ -19,5 +19,5 @@ Use this file in **downstream repos** that ship software. Customize owners/SLAs.
 
 ## Links
 
-- GitHub Security Advisories: https://docs.github.com/code-security/security-advisories/about-github-security-advisories
+- GitHub Security Advisories: <https://docs.github.com/code-security/security-advisories/about-github-security-advisories>
 - Example gitleaks config: `docs/gitleaks-config.example.toml`

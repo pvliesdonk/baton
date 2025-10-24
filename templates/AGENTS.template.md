@@ -7,6 +7,7 @@ This file is intended for **downstream project repos**. It expands the binder wi
 **Hats:** Planner, Architect, Developer (single profile).
 
 **Lanes & SLAs:**
+
 - A (routine): Proposed Solution optional; ship if CI green.
 - B (notify‑then‑go): Proposed Solution required; Architect SLA same day.
 - C (design‑required): Mini design + Architect ack; if delayed, run a short spike.
@@ -24,6 +25,7 @@ This file is intended for **downstream project repos**. It expands the binder wi
 **Stuck protocol:** see `docs/stuck.md` in the toolkit.
 
 **Local policy (customize below):**
+
 - Code style/tooling: _fill_
 - Supported runtimes: _fill_
 - Release cadence/compat: _fill_

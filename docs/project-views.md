@@ -3,6 +3,7 @@
 Use these as recipes in your GitHub Project (table view).
 
 ## Planning
+
 - **Group by:** Status
 - **Sort by:** Priority (desc)
 - **Visible fields:** Title, Priority, Size, Target, Owner, **Context**
@@ -10,6 +11,7 @@ Use these as recipes in your GitHub Project (table view).
 - **Why:** quick prioritization and grooming.
 
 ## Delivery
+
 - **Filter:** Status ∈ {in‑progress, needs‑review}
 - **Group by:** Assignee or Status
 - **Sort by:** Priority (desc)

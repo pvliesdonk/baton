@@ -3,15 +3,18 @@
 Baton keeps docs checks **advisory** to avoid blocking work. The single **blocking** job in branch protection should stay lightweight.
 
 ## What runs
+
 - **Markdown lint**: style nits, headings, spacing.
 - **Link check**: verify **internal** links only.
 
 > External links are ignored on purpose to avoid flaky network failures.
 
 ## When to check external links
+
 If you want to audit external links occasionally (e.g., before a docs-heavy release), add a **manual** workflow and trigger it with `workflow_dispatch`.
 
 Example snippet:
+
 ```yaml
 name: external-linkcheck (manual)
 # Pin the action SHA as you do elsewhere
@@ -27,6 +30,7 @@ jobs:
 ```
 
 ## Editorial checks (for Mode=wiki/story)
+
 - Links resolve
 - Style guide adherence
 - Spellcheck (optional advisory job)
