@@ -8,8 +8,20 @@ A compact legend agents and humans can rely on. Keep tickets short; link here ra
 - **C — design‑required**: Higher risk/impact. Do a **mini design** and get Architect ack before building.
 
 **Auto‑C triggers** (escalate when any apply):
-_Software_ → public interface/API contract; data/schema/storage or migrations; security/authN/Z or cross‑boundary access; new runtime dependency/infrastructure; breaking change or major capability.
-_Wiki/Story_ → canon/continuity change or retcon; timeline/outline/POV change; schema/metadata/ontology change; page/entry rename or move affecting links; new content type/template.
+
+**Software:**
+- Public interface or API contract changes.
+- Data/schema/storage changes or migrations.
+- Security/authN/Z or cross-boundary access.
+- New runtime dependency or infrastructure surface.
+- Breaking change or major capability/behavior shift.
+
+**Wiki/Story:**
+- Canon/continuity change or retcon.
+- Timeline/outline/POV change.
+- Schema/metadata/ontology change.
+- Page/entry rename or move affecting links.
+- New content type or template.
 
 ## Context sizes (ticket sizing)
 - **small**: fits one focused conversational run; trivial rollback.
