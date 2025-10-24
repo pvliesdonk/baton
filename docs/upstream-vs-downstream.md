@@ -3,6 +3,7 @@
 **Purpose:** This repo hosts the **Baton toolkit**. It provides templates, prompts, and example CI for **downstream projects**. The toolkit repo itself is **not bound** by those rules.
 
 ## Upstream (this repo)
+
 - Ships **assets**: prompts, templates under `templates/`, examples, and docs.
 - Keeps CI **minimal** (security baseline + basic health). No SBOM here.
 - No dependency update bots here; those live as **templates**.
@@ -10,16 +11,19 @@
 - Guarantees: versioned changes, concise docs, examples that work.
 
 ## Downstream (projects using Baton)
+
 - Copy or pin assets from `templates/` and tailor.
 - Adopt the rituals: lanes (A/B/C), context sizing (small/medium/large), AI profile (thinking/fast/cheap), golden paths.
 - Use the **board as the control plane**; do not split status across docs.
 
 ## Where things live
+
 - **Templates:** `templates/` (issue forms, CI examples, AGENTS template, CODEOWNERS examples)
 - **Docs:** `docs/` (how to adopt, compatibility examples, stuck protocol)
 - **Upstream binders:** minimal `AGENTS.md` (points at templates)
 
 ## Non‑goals for upstream
+
 - Enforcing project rituals on this repo.
 - Heavy mandatory CI beyond a small security/health baseline.
 

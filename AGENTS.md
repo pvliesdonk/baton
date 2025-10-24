@@ -8,6 +8,8 @@ Upstream binder for the kit itself.
 - Context classes: small / medium / large.
 - AI profile per ticket: thinking | fast | cheap.
 
+Roles support aliases (Curator/Loremaster/Scribe) and tickets can set a **Mode**: software | wiki/story — see `docs/glossary.md`.
+
 **For downstream projects**, start from `templates/AGENTS.template.md` and customize.
 
 See also: `docs/stuck.md`.

@@ -1,22 +1,38 @@
-# Checks Policy (Advisory → Blocking)
+# Docs checks policy (advisory)
 
-A pragmatic rule‑set for CI checks in downstream projects.
+Baton keeps docs checks **advisory** to avoid blocking work. The single **blocking** job in branch protection should stay lightweight.
 
-## Principles
-- **Start advisory.** New checks begin as signal‑only comments/status.
-- **Promote on evidence.** After ~5–10 green PRs with low flake, consider promotion.
-- **Keep one required job.** Protect a single, stable job name (e.g., `blocking`).
-- **Pin by SHA.** Avoid tag drift.
+## What runs
 
-## Promotion checklist
-- Is the false‑positive rate near zero?
-- Does it run in < 5 minutes?
-- Do maintainers know how to fix failures?
-- Is there a rollback plan if it becomes noisy?
+- **Markdown lint**: style nits, headings, spacing.
+- **Link check**: verify **internal** links only.
 
-## Examples
-- Secrets scan (gitleaks): advisory → blocking once stable.
-- Semantic PR title: often advisory forever.
-- Path filters: advisory helper for targeted tests, not blocking.
+> External links are ignored on purpose to avoid flaky network failures.
 
-> Keep the toolkit repo minimal; enforce in downstreams via templates.
+## When to check external links
+
+If you want to audit external links occasionally (e.g., before a docs-heavy release), add a **manual** workflow and trigger it with `workflow_dispatch`.
+
+Example snippet:
+
+```yaml
+name: external-linkcheck (manual)
+# Pin the action SHA as you do elsewhere
+on: { workflow_dispatch: {} }
+jobs:
+  lychee-external:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lycheeverse/lychee-action@7da8ec1fc4e01b5a12062ac6c589c10a4ce70d67
+        with:
+          args: --verbose --no-progress "**/*.md"
+```
+
+## Editorial checks (for Mode=wiki/story)
+
+- Links resolve
+- Style guide adherence
+- Spellcheck (optional advisory job)
+
+Keep the toolkit minimal; tighten rules downstream if your repo needs stricter docs gates.

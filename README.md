@@ -5,10 +5,12 @@ Baton is a reusable way to pair‑program with AI using **one control plane** (G
 > This repo hosts the **toolkit** (prompts, templates, example CI). Downstream projects **adopt** it; the toolkit repo itself stays minimal.
 
 ## What Baton is / isn’t
+
 - **Is:** An upstream toolkit of prompts, docs, and copy‑pasteable templates. The **board is the control plane**. Upstream CI is intentionally minimal; advisory checks are examples under `templates/ci/`.
 - **Isn’t:** A framework/CLI/policy engine. This repo does not ship app code, package manifests, SBOMs, or dependency update bots — those belong in **downstream** repos.
 
 ## Adopt from `templates/`
+
 Copy only what you need from `templates/` into your project and tune locally. Upstream stays slim.
 
 ## Getting started (new project, new repo)
@@ -26,23 +28,27 @@ Copy only what you need from `templates/` into your project and tune locally. Up
 6. **(Optional) Use the Repo Setup Agent**: see `templates/prompts/repo-setup.md` if you want an AI to bootstrap the repo via CLI (with a workspace shell).
 
 ## Ongoing use (day-to-day)
+
 - Keep the **board** as the single source of truth (never duplicate status in docs).
 - Size tickets to the chosen **context**; split if they grow.
 - Default to **Lane B** (notify‑then‑go); escalate to **Lane C** on Auto‑C triggers.
 - Follow the **Stuck Protocol** (`docs/stuck.md`).
-- Use **golden paths** (feature flag / CLI / REST).
+- Use **golden paths** (software: feature flag / CLI / REST; wiki/story: create/expand/refactor/outline/schema).
 - Prefer **one profile** (Planner/Architect/Developer) unless your project truly needs more.
 
 ## What’s in this toolkit
+
 - **Prompts:** Planner, Architect, Developer, Entry Ritual, Repo Setup (`templates/prompts/`).
 - **Templates:** Issue forms, PR template, CODEOWNERS example, CI examples (`templates/`).
-- **Docs:** Adoption guide, compatibility examples, stuck protocol, upstream vs downstream boundary, **CI troubleshooting**, **checks policy**, **stacked PRs**, **context sizing**, **glossary**, **workspace & gh** (`docs/`).
+- **Docs:** Adoption guide, compatibility examples, stuck protocol, upstream vs downstream boundary, **CI troubleshooting**, **checks policy**, **stacked PRs**, **context sizing**, **glossary**, **workspace & gh** (`docs/`). See also: **glossary** for **Mode** and role **aliases**.
 
 ## Upgrading
+
 - Pin Baton by **tag** in downstreams.
 - Review `CHANGELOG.md` and `DECISIONS.md` before upgrading.
 
 ## Share your learnings (field reports)
+
 Have something battle‑tested that helped you? Please upstream the learning so others benefit.
 
 - Open an **Issue** (discussion) or a **PR** (docs/templates/prompts).

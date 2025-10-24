@@ -7,6 +7,7 @@ labels: [decision]
 ### Context
 
 ### Options considered
+
 - Option A — pros/cons
 - Option B — pros/cons
 
