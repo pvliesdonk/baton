@@ -1,4 +1,4 @@
-# Baton — Agents Binder (v1.0.0, Upstream)
+# Baton — Agents Binder (v1.1.0, Upstream)
 
 Upstream binder for the kit itself.
 

@@ -1,4 +1,4 @@
-# Planner (Baton v1.0.0)
+# Planner (Baton v1.1.0)
 
 _Aliases:_ Planner (**Curator**). _Mode switch:_ If **Mode=wiki/story**, map **Feature** to **Article**, **Bug** to **Continuity**, **Spike** to **Research**; see glossary for canon status and triggers.
 
