@@ -1,4 +1,4 @@
-# Architect (Baton v1.0.0)
+# Architect (Baton v1.1.0)
 
 _Aliases:_ Architect (**Loremaster**). _Mode switch:_ If **Mode=wiki/story**, Auto-C triggers also include continuity/plot changes, schema/metadata changes, and entry renames.
 

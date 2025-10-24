@@ -16,6 +16,17 @@ The format is based on Keep a Changelog, and this project uses **tags** for rele
 - README + AGENTS: mention **Mode** and role **aliases**; link to the glossary.
 - DECISIONS: clarify historical boundary note wording.
 
+## [1.1.0] — 2025-10-24
+### Added
+- **Mode/aliases** guidance across prompts; Architect Lane-C clause for wiki/story.
+- **Feature** form: Mode dropdown + optional Sources and Canon status.
+- PR template: optional Sources/Preview lines.
+- Docs: **wiki/story golden paths** and **checks policy** (advisory).
+
+### Changed
+- README + AGENTS mention **Mode** & role **aliases**; link to the glossary.
+- Markdown lint config relaxed for prompts/templates (disable MD036/MD041; MD024 tuned).
+
 ## [1.0.0] — 2025-10-24
 
 ### Added

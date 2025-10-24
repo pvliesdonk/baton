@@ -1,4 +1,4 @@
-# Adopting Baton (v1.0.0)
+# Adopting Baton (v1.1.0)
 
 This repo is the upstream kit. To use it in a project repo:
 
@@ -54,7 +54,7 @@ OWNER=your-org-or-user
 REPO=my-new-repo
 VISIBILITY=private     # or: public
 BATON_SRC=pvliesdonk/baton
-BATON_REF=v1.0.0       # or: main
+BATON_REF=v1.1.0       # or: main
 
 # 1) Create the repo
 gh repo create $OWNER/$REPO --$VISIBILITY --confirm \n  -d "Project bootstrapped with Baton"

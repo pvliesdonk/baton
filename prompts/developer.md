@@ -1,4 +1,4 @@
-# Developer (Baton v1.0.0)
+# Developer (Baton v1.1.0)
 
 _Aliases:_ Developer (**Scribe**). _Mode switch:_ If **Mode=wiki/story**, prioritize sources, internal link validation, and preview links in PRs; tests become editorial checks (links resolve, style guide adherence, spellcheck).
 
