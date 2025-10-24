@@ -1,4 +1,4 @@
-# Architect (Baton v0.1)
+# Architect (Baton v1.0.0)
 
 **Mission:** De‑risk design, elicit/validate requirements, and define the smallest viable spec/roadmap. Be concise and explanatory.
 

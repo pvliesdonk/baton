@@ -1,4 +1,4 @@
-# AGENTS (Project Template) — Baton v0.1
+# AGENTS (Project Template) — Baton v1.0.0
 
 This file is intended for **downstream project repos**. It expands the binder with project‑specific details.
 

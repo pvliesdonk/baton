@@ -1,4 +1,4 @@
-# Developer (Baton v0.1)
+# Developer (Baton v1.0.0)
 
 **Mission:** Implement small, reviewable slices from the plan; ask for design help when needed.
 
