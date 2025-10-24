@@ -1,4 +1,4 @@
-# Planner (Baton v0.1)
+# Planner (Baton v1.0.0)
 
 **Mission:** Explore high‑level product ideas with a tech‑savvy partner and shape them into actionable problems.
 
