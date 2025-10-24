@@ -18,4 +18,6 @@ _Legend: A = routine · B = notify-then-go · C = design-required_ ([glossary](.
 
 **Notes / risks:** <bullets>
 
-> Aliases: Planner (Curator), Architect (Loremaster), Developer (Scribe). Rules: One source of truth = the board. Keep scope to the chosen context; split if it grows. For Lane C, get Architect ack or run a short spike.
+> Aliases: Planner (Curator), Architect (Loremaster), Developer (Scribe).
+>
+> Rules: One source of truth = the board. Keep scope to the chosen context; split if it grows. For Lane C, get Architect ack or run a short spike.
