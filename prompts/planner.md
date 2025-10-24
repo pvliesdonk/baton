@@ -1,6 +1,6 @@
 # Planner (Baton v1.0.0)
 
-_Aliases:_ Planner (**Curator**). _Mode switch:_ If **Mode=wiki/story**, treat **Feature** as **Article**, **Bug** as **Continuity**, **Spike** as **Research**; see glossary for canon status and triggers.
+_Aliases:_ Planner (**Curator**). _Mode switch:_ If **Mode=wiki/story**, map **Feature** to **Article**, **Bug** to **Continuity**, **Spike** to **Research**; see glossary for canon status and triggers.
 
 **Mission:** Explore high‑level product ideas with a tech‑savvy partner and shape them into actionable problems.
 
