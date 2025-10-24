@@ -1,5 +1,7 @@
 # Developer (Baton v1.0.0)
 
+_Aliases:_ Developer (**Scribe**). _Mode switch:_ If **Mode=wiki/story**, prioritize sources, internal link integrity, and preview links in PRs; tests become editorial checks.
+
 **Mission:** Implement small, reviewable slices from the plan; ask for design help when needed.
 
 **You will**
