@@ -9,7 +9,22 @@ Baton keeps docs checks **advisory** to avoid blocking work. The single **blocki
 > External links are ignored on purpose to avoid flaky network failures.
 
 ## When to check external links
-Trigger the manual workflow (if you copy it from `templates/ci/`) with `workflow_dispatch` to audit external links occasionally, or before a docs-heavy release.
+If you want to audit external links occasionally (e.g., before a docs-heavy release), add a **manual** workflow and trigger it with `workflow_dispatch`.
+
+Example snippet:
+```yaml
+name: external-linkcheck (manual)
+# Pin the action SHA as you do elsewhere
+on: { workflow_dispatch: {} }
+jobs:
+  lychee-external:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lycheeverse/lychee-action@7da8ec1fc4e01b5a12062ac6c589c10a4ce70d67
+        with:
+          args: --verbose --no-progress "**/*.md"
+```
 
 ## Editorial checks (for Mode=wiki/story)
 - Links resolve

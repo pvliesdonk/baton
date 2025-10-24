@@ -6,13 +6,12 @@ The format is based on Keep a Changelog, and this project uses **tags** for rele
 
 ## [Unreleased]
 ### Added
-- **Mode/aliases** guidance across prompts; Architect Lane-C clause for wiki/story.
-- **Feature** form: Mode dropdown + optional Sources and Canon status.
-- PR template: optional Sources/Preview lines.
-- Docs: wiki/story golden paths; checks policy (advisory).
+- Docs: **wiki/story golden paths**.
+- Docs: **checks policy** (advisory) clarifying internal-only link checks by default.
 
 ### Changed
-- README + AGENTS mention Mode & aliases and link to the glossary.
+- README + AGENTS: mention **Mode** and role **aliases**; link to the glossary.
+- DECISIONS: clarify historical boundary note wording.
 
 ## [1.0.0] — 2025-10-24
 ### Added
