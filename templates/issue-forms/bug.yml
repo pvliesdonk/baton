@@ -1,5 +1,5 @@
-name: Bug
-description: Something is broken or regressed
+name: Bug / Continuity
+description: Something is broken or regressed (for wiki/story: continuity conflict or canon error)
 labels: ["type:bug"]
 body:
   - type: input

@@ -14,7 +14,13 @@ Link the ticket. Summarize the problem and why this is the right time.
 Bullet points; include flags/migrations/docs updates.
 
 ## How tested
-Commands, screenshots, or logs.
+Commands, screenshots, or logs. If **Mode=wiki/story**, note editorial checks (links resolve, style guide adherence, spellcheck).
+
+## Sources / refs (optional)
+Links, citations, or materials used.
+
+## Preview link (optional)
+If docs/wiki are published, add a preview URL.
 
 ## Rollout
-Flags, toggles, and kill‑switch.
+Flags, toggles, and kill‑switch (or rename/link plan).

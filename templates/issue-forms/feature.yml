@@ -3,6 +3,14 @@ description: Propose a new capability or improvement
 labels: ["type:feature"]
 body:
   - type: dropdown
+    id: mode
+    attributes:
+      label: Mode
+      options: ["software","wiki/story"]
+      description: Choose how to interpret fields and triggers
+    validations:
+      required: true
+  - type: dropdown
     id: lane
     attributes:
       label: Lane
@@ -44,7 +52,21 @@ body:
     id: proposed_solution
     attributes:
       label: Proposed Solution (required for B/C; optional for A)
-      description: Intent, scope guardrails, test plan, rollback/flag, risks, reading set
+      description: Intent, scope guardrails, test plan (or editorial checks), rollback/flag (or rename/link plan), risks, reading set
+    validations:
+      required: false
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources / references (optional)
+      description: Links, citations, or materials to ground the work
+    validations:
+      required: false
+  - type: dropdown
+    id: canon_status
+    attributes:
+      label: Canon status (optional)
+      options: ["Draft","Canon","Apocrypha"]
     validations:
       required: false
   - type: textarea
