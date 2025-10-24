@@ -5,11 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on Keep a Changelog, and this project uses **tags** for releases.
 
 ## [Unreleased]
+- Nothing yet.
+
+## [1.0.0] — 2025-10-24
 ### Added
+- Ultra-minimal **glossary** (lanes, context sizes, AI profiles) and **lane legend** in Entry Ritual; linked from AGENTS binders.
 - Upstream/Downstream boundary clarified; ultra-minimal stance documented.
 - Downstream `SECURITY.template.md` for GHSA reporting.
 - Minimal `.editorconfig` and `.gitattributes` (plus template copies).
-- Advisory docs checks plan (markdownlint + link check).
+- Advisory docs checks (markdownlint + link check) with pinned actions; advisory-only.
 
 ### Changed
 - Upgrading guidance: pin by tag; read `CHANGELOG.md` + `DECISIONS.md`.
