@@ -1,30 +1,52 @@
-name: pr-size-guard (example)
+name: pr-size-guard
 
 on:
   pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
 
 permissions:
   contents: read
-  pull-requests: write
+  pull-requests: read
+  statuses: write
 
 jobs:
-  pr_size:
+  size:
     runs-on: ubuntu-latest
     steps:
-      - name: Compute PR size
-        id: sz
-        run: |
-          files=$(jq -r '.pull_request.changed_files' < $GITHUB_EVENT_PATH)
-          adds=$(jq -r '.pull_request.additions' < $GITHUB_EVENT_PATH)
-          dels=$(jq -r '.pull_request.deletions' < $GITHUB_EVENT_PATH)
-          loc=$((adds + dels))
-          echo "files=$files" >> $GITHUB_OUTPUT
-          echo "loc=$loc" >> $GITHUB_OUTPUT
-      - name: Warn if large
-        if: ${{ steps.sz.outputs.files > 5 || steps.sz.outputs.loc > 300 }}
-        uses: marocchino/sticky-pull-request-comment@c909654a42f1e054ea71661e6c1babbc3edb8eb1
+      - name: Compute PR diff size
+        uses: actions/github-script@v7
+        env:
+          PR_SIZE_WARN: ${{ vars.PR_SIZE_WARN }}
+          PR_SIZE_HARD: ${{ vars.PR_SIZE_HARD }}
         with:
-          header: pr-size-guard
-          message: |
-            ⚠️ PR size is high: **${{ steps.sz.outputs.files }} files**, **${{ steps.sz.outputs.loc }} LOC**.
-            Consider splitting to keep one ticket ≈ one run (tests excluded).
+          script: |
+            const pr = context.payload.pull_request;
+            if (!pr) { core.notice('No PR context; skipping.'); return; }
+
+            const files = await github.paginate(github.rest.pulls.listFiles, { owner: context.repo.owner, repo: context.repo.repo, pull_number: pr.number, per_page: 100 });
+
+            const docsOnly = files.length > 0 && files.every(f => /^(docs\/|.*\.md$)/.test(f.filename));
+            const { additions, deletions, changes } = files.reduce((acc, f) => {
+              acc.additions += f.additions;
+              acc.deletions += f.deletions;
+              acc.changes += f.changes;
+              return acc;
+            }, { additions: 0, deletions: 0, changes: 0 });
+
+            core.summary
+              .addHeading('PR Size Guard')
+              .addTable([
+                [{ data: 'Files', header: true }, files.length.toString()],
+                [{ data: 'Additions', header: true }, additions.toString()],
+                [{ data: 'Deletions', header: true }, deletions.toString()],
+                [{ data: 'Changed lines', header: true }, changes.toString()],
+                [{ data: 'Docs-only', header: true }, docsOnly ? 'yes' : 'no']
+              ])
+              .write();
+
+            const HARD = parseInt(process.env.PR_SIZE_HARD || '800', 10);
+            const WARN = parseInt(process.env.PR_SIZE_WARN || '400', 10);
+
+            if (docsOnly) { core.notice('Docs-only change detected; size guard not enforced.'); return; }
+            if (changes > HARD) { core.setFailed(`PR too large: ${changes} changed lines > ${HARD}. Please split into smaller PRs.`); return; }
+            if (changes > WARN) { core.warning(`Large PR: ${changes} changed lines > ${WARN}. Consider splitting or justifying in the description.`); }
