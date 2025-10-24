@@ -1,22 +1,19 @@
-# Checks Policy (Advisory → Blocking)
+# Docs checks policy (advisory)
 
-A pragmatic rule‑set for CI checks in downstream projects.
+Baton keeps docs checks **advisory** to avoid blocking work. The single **blocking** job in branch protection should stay lightweight.
 
-## Principles
-- **Start advisory.** New checks begin as signal‑only comments/status.
-- **Promote on evidence.** After ~5–10 green PRs with low flake, consider promotion.
-- **Keep one required job.** Protect a single, stable job name (e.g., `blocking`).
-- **Pin by SHA.** Avoid tag drift.
+## What runs
+- **Markdown lint**: style nits, headings, spacing.
+- **Link check**: verify **internal** links only.
 
-## Promotion checklist
-- Is the false‑positive rate near zero?
-- Does it run in < 5 minutes?
-- Do maintainers know how to fix failures?
-- Is there a rollback plan if it becomes noisy?
+> External links are ignored on purpose to avoid flaky network failures.
 
-## Examples
-- Secrets scan (gitleaks): advisory → blocking once stable.
-- Semantic PR title: often advisory forever.
-- Path filters: advisory helper for targeted tests, not blocking.
+## When to check external links
+Trigger the manual workflow (if you copy it from `templates/ci/`) with `workflow_dispatch` to audit external links occasionally, or before a docs-heavy release.
 
-> Keep the toolkit repo minimal; enforce in downstreams via templates.
+## Editorial checks (for Mode=wiki/story)
+- Links resolve
+- Style guide adherence
+- Spellcheck (optional advisory job)
+
+Keep the toolkit minimal; tighten rules downstream if your repo needs stricter docs gates.

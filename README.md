@@ -30,13 +30,13 @@ Copy only what you need from `templates/` into your project and tune locally. Up
 - Size tickets to the chosen **context**; split if they grow.
 - Default to **Lane B** (notify‑then‑go); escalate to **Lane C** on Auto‑C triggers.
 - Follow the **Stuck Protocol** (`docs/stuck.md`).
-- Use **golden paths** (feature flag / CLI / REST).
+- Use **golden paths** (software: feature flag / CLI / REST; wiki/story: create/expand/refactor/outline/schema).
 - Prefer **one profile** (Planner/Architect/Developer) unless your project truly needs more.
 
 ## What’s in this toolkit
 - **Prompts:** Planner, Architect, Developer, Entry Ritual, Repo Setup (`templates/prompts/`).
 - **Templates:** Issue forms, PR template, CODEOWNERS example, CI examples (`templates/`).
-- **Docs:** Adoption guide, compatibility examples, stuck protocol, upstream vs downstream boundary, **CI troubleshooting**, **checks policy**, **stacked PRs**, **context sizing**, **glossary**, **workspace & gh** (`docs/`).
+- **Docs:** Adoption guide, compatibility examples, stuck protocol, upstream vs downstream boundary, **CI troubleshooting**, **checks policy**, **stacked PRs**, **context sizing**, **glossary**, **workspace & gh** (`docs/`). See also: **glossary** for **Mode** and role **aliases**.
 
 ## Upgrading
 - Pin Baton by **tag** in downstreams.
